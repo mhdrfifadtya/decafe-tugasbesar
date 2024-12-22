@@ -1,0 +1,274 @@
+/* Sidebar Sticky */
+.sticky-sidebar {
+    position: sticky;
+    top: 70px;
+    z-index: 1020;
+    height: max-content;
+    padding: 15px 10px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: 1px solid #dee2e6;
+    transition: all 0.3s ease;
+    max-height: 100vh;
+    overflow-y: auto;
+    /* Tambahkan scrollbar jika konten terlalu panjang */
+}
+
+.sticky-sidebar:hover {
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+    transform: translateY(-3px);
+}
+
+/* Gaya Navigasi */
+.sticky-sidebar a.nav-link {
+    font-size: 15px;
+    font-weight: 500;
+    color: #495057;
+    transition: color 0.2s ease;
+    padding: 8px 12px;
+    border-radius: 8px;
+}
+
+.sticky-sidebar a.nav-link:hover {
+    background-color: #f8f9fa;
+    color: #010914;
+    text-decoration: none;
+}
+
+.sticky-sidebar a.nav-link i {
+    margin-right: 8px;
+    font-size: 18px;
+    color: #6c757d;
+    transition: color 0.2s ease;
+}
+
+.sticky-sidebar a.nav-link:hover i {
+    color: #020202;
+}
+
+.sticky-sidebar a.nav-link.active {
+    background-color: #0d6efd;
+    color: #ffffff;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+/* Responsivitas untuk Sidebar */
+@media (max-width: 991px) {
+    .sticky-sidebar {
+        position: sticky; /* Tetap sticky untuk layar kecil */
+        top: 60px; /* Sesuaikan jarak */
+        margin: 0 10px; /* Tambahkan margin untuk jarak */
+        padding: 10px; /* Sesuaikan padding */
+        width: 100%; /* Pastikan memenuhi kolom */
+        max-width: 300px; /* Tetapkan lebar maksimum */
+    }
+}
+
+@media (max-width: 576px) {
+    .sticky-sidebar {
+        position: sticky; /* Tetap sticky */
+        top: 50px; /* Kurangi jarak untuk layar lebih kecil */
+        padding: 8px; /* Sesuaikan padding */
+    }
+}
+
+/* Tambahan opsional untuk scrollbar yang lebih estetik */
+.sticky-sidebar::-webkit-scrollbar {
+    width: 8px;
+}
+
+.sticky-sidebar::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+}
+
+.sticky-sidebar::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+/* Akhir Sidebar */
+
+/* Priview Conten-daftar_menu.php*/
+Container Preview .image-preview-container {
+    position: relative;
+    width: 100%;
+}
+
+/* Area Image Preview */
+.image-preview {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px dashed #ced4da;
+    background-color: #f8f9fa;
+    height: 220px;
+    /* Tinggi area preview */
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Gambar di Area Preview */
+.image-preview img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+    /* Sesuaikan gambar */
+}
+
+/* Hover Effect */
+.image-preview:hover {
+    border-color: #0d6efd;
+    background-color: #e9ecef;
+}
+
+/* Label "Preview Image" */
+.image-preview-container label {
+    font-size: 14px;
+    color: #6c757d;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .image-preview {
+        height: 180px;
+    }
+}
+/* Akhir Priview Conten*/
+
+/* BAGIAN SCROLL KEATAS */
+.keatas {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 45px;
+    height: 45px;
+    background-color: var(--bg-color-2);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: transform 0.3s, opacity 0.3s;
+}
+.keatas:hover {
+    transform: scale(1.1);
+}
+.keatas h3 {
+    transform: rotate(-90deg);
+    color: var(--text-color);
+    font-size: 1.5rem;
+}
+
+/* BAGIAN FOOTER */
+.footer {
+    background-color: #091126;
+    color: var(--text-color);
+    text-align: center;
+    padding: 40px 20px;
+    font-size: 0.9rem;
+}
+.footer p {
+    margin: 0;
+    padding: 20px 0;
+}
+.footer-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 30px 15px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+.footer-logo {
+    flex: 1;
+    text-align: left;
+    max-width: 300px;
+}
+.footer-logo p {
+    font-weight: 300;
+    line-height: 1.6;
+    font-size: 0.95rem;
+    color: #bbb;
+}
+.footer-links,
+.footer-social {
+    flex: 1;
+    text-align: left;
+    max-width: 200px;
+}
+.footer-links ul,
+.footer-social ul {
+    list-style: none;
+    padding: 0;
+}
+.footer-links ul li,
+.footer-social ul li {
+    margin-bottom: 10px;
+}
+.footer-links a,
+.footer-social a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: color 0.3s ease;
+}
+.footer-links a:hover,
+.footer-social a:hover {
+    color: #ffd700;
+}
+.footer-social ul li {
+    display: inline-block;
+    margin-right: 10px;
+}
+.footer-social a i {
+    font-size: 1.2rem;
+}
+.footer-info {
+    margin-top: 20px;
+}
+.map {
+    width: 100%;
+    height: 300px;
+    border-radius: 10px;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Tambahan estetik untuk tombol navigasi */
+.navbar a {
+    font-size: 1rem;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+.navbar a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #ffd700;
+}
+
+/* Carousel estetik */
+.carousel-inner .carousel-item img {
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Judul estetik */
+.card {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+.card-title {
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+.card-text {
+    font-size: 1rem;
+    color: #bbb;
+    line-height: 1.6;
+}
